@@ -1,0 +1,103 @@
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #FAF7F3;
+    padding: 5px;
+    margin: 15px;
+    font-size: 25px;
+    font-family:Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-family:Arial, sans-serif;
+    font-size: 1.95em;
+}
+
+h2{
+    text-align:center;
+  }
+
+li{
+    margin-top: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+figure {
+  margin: 0;
+  border: 5px solid #0F828C;
+  border-radius: 35px;
+  background-color: #78B9B5;
+  color: #065084;
+  padding: 10px;
+  text-align: center;
+}
+
+img{
+    border: none;
+    border-radius: inherit;
+    width: 100%;
+  }
+
+figcaption {
+  margin-top: 8px;
+  font-size: 1rem;
+}
+
+.label{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@media (min-width: 772px) {
+  .grid {
+    grid-template-columns: 1fr 1fr; 
+  }
+
+  figure {
+    border-radius: 50%; 
+  }
+
+   .grid figure:last-child {
+    grid-column: 1 / span 2;
+  }
+}
+
+@media (min-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  figure {
+    border-radius: 0; 
+  }
+
+  .grid figure:nth-child(3n) {
+    grid-column: span 2;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto; 
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #320A6B;
+    color: #FAF7F3;
+  }
+
+  figure {
+    background-color: #065084; 
+    color: #78B9B5; 
+    border-color: #320A6B;
+  }
+}
